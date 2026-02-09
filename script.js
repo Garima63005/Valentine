@@ -24,9 +24,6 @@ window.onload = function () {
   const response = document.getElementById("response");
 
   yesBtn.addEventListener("click", () => {
-  // optional: ek chhota sa message dikha de
-  response.classList.remove("hidden");
-  response.innerHTML = "Best choice 😌❤️";
 
   // 800ms baad shayari wale page pe le jao
   setTimeout(() => {
@@ -53,3 +50,13 @@ window.onload = function () {
     }
   });
 };
+if (window.location.pathname.includes("index.html")) {
+  const noBtn = document.getElementById("noBtn");
+  if (noBtn) {
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * 300 - 150;
+      const y = Math.random() * 200 - 100;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  }
+}
