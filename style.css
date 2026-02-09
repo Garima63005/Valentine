@@ -1,75 +1,97 @@
-body {
+* {
   margin: 0;
-  height: 100vh;
-  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffd6e8, #fff3f8);
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  justify-content: center;
 }
 
-.container {
+.card {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 20px;
   text-align: center;
-  background: #fff;
-  padding: 40px 30px;
-  border-radius: 25px;
-  max-width: 520px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  max-width: 350px;
+  width: 90%;
+  box-shadow: 0 15px 40px rgba(255, 0, 120, 0.25);
+  animation: pop 0.5s ease;
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: #ff3f6c;
-  margin-bottom: 10px;
+@keyframes pop {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
-h2 span {
-  color: #ff3f6c;
+#gif {
+  width: 200px;
+  max-width: 100%;
+  margin-bottom: 15px;
+  border-radius: 12px;
 }
 
-.shayari {
-  margin: 20px 0;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #444;
+#title {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+#subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
 }
 
 .buttons {
-  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 button {
-  padding: 12px 28px;
-  margin: 10px;
-  font-size: 1.1rem;
+  padding: 10px 22px;
   border: none;
-  border-radius: 30px;
+  border-radius: 20px;
+  font-size: 16px;
   cursor: pointer;
+  background: #ff4d6d;
+  color: white;
   transition: 0.2s ease;
 }
 
-#yesBtn {
-  background: #ff3f6c;
-  color: #fff;
-}
-
-#yesBtn:hover {
-  transform: scale(1.05);
+button:hover {
+  transform: scale(1.08);
+  background: #ff1f4a;
 }
 
 #noBtn {
-  background: #e0e0e0;
+  background: #bdbdbd;
 }
 
-#response {
-  margin-top: 22px;
-  font-size: 1.3rem;
-  color: #ff3f6c;
-  min-height: 28px;
+#noBtn:hover {
+  background: #9e9e9e;
 }
 
-.footer {
-  margin-top: 18px;
-  font-size: 0.9rem;
-  color: #777;
+.hidden {
+  display: none;
 }
+
+#finalMessage {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #ff2f68;
+  font-weight: 600;
+}
+
+
