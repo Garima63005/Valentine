@@ -5,7 +5,7 @@ const titles = [
   "Do you love me? 🥺",
   "Please think again! 🙄",
   "Ek aur baar soch lo! 😣",
-  "Baby maan jao na! Kitna bhaav khaogi 😭"
+  "Baby maan jao na! Kitna bhaav khaoge 😭"
 ];
 
 const subtitles = [
@@ -24,9 +24,16 @@ window.onload = function () {
   const response = document.getElementById("response");
 
   yesBtn.addEventListener("click", () => {
-    response.classList.remove("hidden");
-    response.innerHTML = "Yayyy! Mohit ❤️ Ab to officially mera Valentine ho gaya 😘💌";
-  });
+  // optional: ek chhota sa message dikha de
+  response.classList.remove("hidden");
+  response.innerHTML = "Best choice 😌❤️";
+
+  // 800ms baad shayari wale page pe le jao
+  setTimeout(() => {
+    window.location.href = "index.html";
+  }, 800);
+});
+
 
   noBtn.addEventListener("click", () => {
     step++;
